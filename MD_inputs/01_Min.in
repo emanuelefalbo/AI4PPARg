@@ -1,0 +1,9 @@
+Energy minimization 
+&cntrl 
+imin=1, ntmin=0, maxcyc=1000,   ! Minimization, method, number of cycles 
+ntpr=5,                         ! Print energies every ntpr steps
+ntr=1,                          ! Use harmonic cartesian restraints   
+restraint_wt=100.0,              ! Restraint force kcal/mol
+restraintmask="@CA,N,O",
+&end
+END

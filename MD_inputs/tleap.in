@@ -1,0 +1,13 @@
+source leaprc.protein.ff14SB
+source leaprc.water.spce 
+source leaprc.gaff2  
+EKP = loadmol2 lig_ekp_bcc_gaff2.mol2
+loadamberparams lig_ekp_AC.frcmod
+mol = loadpdb coavppar_agoinv_fixed.pdb  
+check mol
+solvateOct mol SPCBOX 10.0 
+addions mol Cl- 36
+addions mol Na+ 0  
+savepdb mol model_solvated.pdb 
+saveamberparm mol coavppar_agoinv.prmtop coavppar_agoinv.inpcrd 
+quit #Quit tleap
